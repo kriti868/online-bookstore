@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile - BookHaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">Book<span>Haven</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+<a href="registration.html">Register</a>
+<a href="profile.html">Profile</a>
+<a href="#" onclick="logout()">Logout</a>
+</nav>
+</header>
+
+<div class="container">
+<div class="form-box">
+<h2>My Profile</h2>
+
+<div id="viewSection">
+<p><strong>Name:</strong> <span id="profileName"></span></p>
+<p><strong>Email:</strong> <span id="profileEmail"></span></p>
+<p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+<p><strong>Address:</strong> <span id="profileAddress"></span></p>
+<br>
+<button class="btn" onclick="enableEdit()">Edit Profile</button>
+</div>
+
+<div id="editSection" style="display:none;">
+<form onsubmit="saveProfile(event)">
+<div class="form-group">
+<label>Name</label>
+<input type="text" id="editName" required>
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input type="text" id="editPhone" required>
+</div>
+<div class="form-group">
+<label>Address</label>
+<textarea id="editAddress" rows="3" required></textarea>
+</div>
+<button type="submit" class="btn btn-success">Save Changes</button>
+<button type="button" class="btn" onclick="document.getElementById('editSection').style.display='none';
+document.getElementById('viewSection').style.display='block';">Cancel</button>
+</form>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+<script>
+loadProfile();
+</script>
+</body>
+</html>

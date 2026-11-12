@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Catalog - BookHaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">Book<span>Haven</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+<a href="registration.html">Register</a>
+<a href="profile.html">Profile</a>
+</nav>
+</header>
+
+<div class="container">
+<h1>Books Catalog</h1>
+
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Search by title or author...">
+<select id="categoryFilter">
+<option value="all">All Categories</option>
+<option value="Fiction">Fiction</option>
+<option value="Self-Help">Self-Help</option>
+<option value="History">History</option>
+<option value="Finance">Finance</option>
+</select>
+</div>
+
+<div class="books-grid" id="booksContainer"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+displayBooks();
+setupSearch();
+</script>
+</body>
+</html>

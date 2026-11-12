@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment - BookHaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">Book<span>Haven</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+<a href="registration.html">Register</a>
+<a href="profile.html">Profile</a>
+</nav>
+</header>
+
+<div class="container">
+<div class="form-box">
+<h2>Payment Details</h2>
+<p style="margin-bottom:20px; color:#666;">This is a simulated payment. No real money will be charged.</p>
+
+<form onsubmit="processPayment(event)">
+<div class="form-group">
+<label>Cardholder Name</label>
+<input type="text" id="cardName" placeholder="John Doe" required>
+<div id="cardNameError" class="error"></div>
+</div>
+<div class="form-group">
+<label>Card Number</label>
+<input type="text" id="cardNumber" placeholder="1234567890123456" maxlength="16" required>
+<div id="cardNumberError" class="error"></div>
+</div>
+<div class="form-group">
+<label>Expiry Date (MM/YY)</label>
+<input type="text" id="cardExpiry" placeholder="12/28" required>
+<div id="cardExpiryError" class="error"></div>
+</div>
+<div class="form-group">
+<label>CVV</label>
+<input type="text" id="cardCvv" placeholder="123" maxlength="4" required>
+<div id="cardCvvError" class="error"></div>
+</div>
+<button type="submit" class="btn btn-success" style="width:100%">Pay Now</button>
+</form>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

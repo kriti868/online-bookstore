@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookHaven - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">Book<span>Haven</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="catalog.html">Catalog</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+<a href="registration.html">Register</a>
+<a href="profile.html">Profile</a>
+</nav>
+</header>
+
+<div class="container">
+<h1>Welcome to BookHaven</h1>
+<p style="font-size:18px; margin-bottom:30px;">Your one-stop destination for amazing books.</p>
+
+<div class="search-bar">
+<input type="text" id="homeSearch" placeholder="Search books...">
+<button class="btn" onclick="window.location.href='catalog.html'">Search</button>
+</div>
+
+<h2>Featured Books</h2>
+<div class="books-grid" id="featuredBooks"></div>
+</div>
+
+<footer>
+<p>© 2026 BookHaven | JavaScript Assignment</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Show first 4 books as featured
+document.getElementById("featuredBooks").innerHTML = books.slice(0,4).map(book => `
+<div class="book-card">
+<img src="${book.image}" alt="${book.title}">
+<div class="book-info">
+<h3>${book.title}</h3>
+<p>by ${book.author}</p>
+<div class="price">₹${book.price}</div>
+<a href="catalog.html" class="btn">View Catalog</a>
+</div>
+</div>
+`).join("");
+</script>
+</body>
+</html>
